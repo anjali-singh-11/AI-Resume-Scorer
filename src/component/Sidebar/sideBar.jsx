@@ -1,10 +1,14 @@
 import React from 'react'
 import styles from './SideBar.module.css'
 
-const sideBar = () => {
+const SideBar = () => {
   return (
-    <div>sideBar</div>
+    <div className={styles.sidebar}>
+        <div className={styles.sidebarIcon}>
+            <div>Resume Screening</div>
+        </div>
+    </div>
   )
 }
 
-export default sideBar
+export default SideBar
