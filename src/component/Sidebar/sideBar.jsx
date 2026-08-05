@@ -2,8 +2,15 @@ import React from 'react'
 import styles from './SideBar.module.css';
 import ArticleIcon from '@mui/icons-material/Article';
 import DashboardIcon from '@mui/icons-material/Dashboard';
+import ManageSearchIcon from '@mui/icons-material/ManageSearch';
+import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
+import LogoutIcon from '@mui/icons-material/Logout';
+import { Link, useLocation } from 'react-router-dom';
 
 const SideBar = () => {
+
+    const location = useLocation();
+    console.log(location);
   return (
     <div className={styles.sideBar}>
         <div className={styles.sideBarIcon}>
@@ -13,23 +20,23 @@ const SideBar = () => {
 
         <div className='styles.sideBarOptionsBlock'>
 
-            <div className='styles.sideBarOption'>
+            <Link to={'/dashboard'} className={[styles.sideBarOption,location.pathname === '/dashboard'?styles.selectedOption:null].join(' ')}>
                 <DashboardIcon sx={{fontSize:22}}/>
                 <div>Dashboard</div>
-            </div>
+            </Link>
 
-            <div className='styles.sideBarOption'>
-                <DashboardIcon sx={{fontSize:22}}/>
+            <Link to={'history'} className={[styles.sideBarOption,location.pathname === '/history'?styles.selectedOption:null].join(' ')}>
+                <ManageSearchIcon sx={{fontSize:22}}/>
                 <div>History</div>
-            </div>
+            </Link>
 
-            <div className='styles.sideBarOption'>
-                <DashboardIcon sx={{fontSize:22}}/>
+            <Link to={'admin'} className={[styles.sideBarOption,location.pathname === '/admin'?styles.selectedOption:null].join(' ')}>
+                <AdminPanelSettingsIcon sx={{fontSize:22}}/>
                 <div>Admin</div>
-            </div>
+            </Link>
 
             <div className='styles.sideBarOption'>
-                <DashboardIcon sx={{fontSize:22}}/>
+                <LogoutIcon sx={{fontSize:22}}/>
                 <div>LogOut</div>
             </div>
 
