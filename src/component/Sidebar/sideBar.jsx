@@ -12,10 +12,27 @@ const SideBar = () => {
         </div>
 
         <div className='styles.sideBarOptionsBlock'>
+
             <div className='styles.sideBarOption'>
-                <DashboardIcon />
+                <DashboardIcon sx={{fontSize:22}}/>
                 <div>Dashboard</div>
             </div>
+
+            <div className='styles.sideBarOption'>
+                <DashboardIcon sx={{fontSize:22}}/>
+                <div>History</div>
+            </div>
+
+            <div className='styles.sideBarOption'>
+                <DashboardIcon sx={{fontSize:22}}/>
+                <div>Admin</div>
+            </div>
+
+            <div className='styles.sideBarOption'>
+                <DashboardIcon sx={{fontSize:22}}/>
+                <div>LogOut</div>
+            </div>
+
         </div>
     </div>
   )
