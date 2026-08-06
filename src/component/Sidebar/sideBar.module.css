@@ -18,9 +18,11 @@
     font-size: 26px;
 }
 
-.sideBarOptionBlock{
+.sideBarOptionsBlock{
     margin-top: 30px;
+
 }
+
 
 .sideBarOption{
     padding: 20px;
@@ -34,6 +36,6 @@
 }
 
 .selectedOption{
-    background-color: rgb(72,72,222);
-    
+    background-color: rgb(72, 72, 222);
+
 }
